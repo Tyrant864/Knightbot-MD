@@ -1,3 +1,4 @@
+"postinstall": "npm rebuild sharp --ignore-scripts"
 {
   "name": "knightbot",
   "version": "1.0.0",
