@@ -6,6 +6,9 @@
  * Makes session permanent and auto-restores from backup
  */
 
+// Load keepAlive.js to ping itself and prevent Replit from sleeping
+require('./keepAlive.js');
+
 // --- Keep the bot alive on Replit ---
 const express = require("express");
 const app = express();
