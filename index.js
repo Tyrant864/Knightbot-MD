@@ -5,6 +5,19 @@
  * Persistent Edition by Ava (2025)
  * Makes session permanent and auto-restores from backup
  */
+
+// --- Keep the bot alive on Replit ---
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => res.send("Bot is alive!"));
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`🌐 Server running on port ${PORT}`)));
+
+// --- KeepAlive ping ---
+require('./keepAlive.js');
+
 require('./settings')
 const { Boom } = require('@hapi/boom')
 const fs = require('fs')
